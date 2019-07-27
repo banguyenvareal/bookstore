@@ -44,6 +44,10 @@ ActiveRecord::Schema.define(version: 2019_07_25_063418) do
   end
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+<<<<<<< HEAD
+=======
+    t.string "url", null: false
+>>>>>>> b1e5479fbef8612726caaa6a8d98c520c4717f71
     t.bigint "book_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

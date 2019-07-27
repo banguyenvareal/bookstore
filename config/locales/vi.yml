@@ -123,7 +123,7 @@ vi:
               greater_than_or_equal_to: "Số lượng nhập không hợp lệ"
             price:
               greater_than_or_equal_to: "Giá bán không hợp lệ"
-
+              
   book_request:
     create: "Tạo yêu cầu"
     name: "Tên sách:"
