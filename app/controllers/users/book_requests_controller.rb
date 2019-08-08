@@ -29,7 +29,7 @@ module Users
 
     def destroy
       if @book_request.destroy
-        redirect_to user_book_requests(current_user, @book_request)
+        redirect_to user_book_requests_path(current_user)
       end
     end
 
