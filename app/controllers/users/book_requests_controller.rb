@@ -2,7 +2,7 @@ module Users
   class BookRequestsController < ApplicationController
     before_action :check_log_in, only: %i[new edit index update]
     before_action :check_valid_user, only: %i[edit update]
-    before_action :find_and_assign_book_request, only: %i[edit update]
+    before_action :find_and_assign_book_request, only: %i[edit update destroy]
     def index
       @book_requests = book_requests_user.book_requests
                                          .order(created_at: :desc)
@@ -24,6 +24,12 @@ module Users
         redirect_to user_book_request_path(current_user, @book_request)
       else
         render 'edit'
+      end
+    end
+
+    def destroy
+      if @book_request.destroy
+        redirect_to user_book_requests(current_user, @book_request)
       end
     end
 
