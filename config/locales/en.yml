@@ -155,3 +155,5 @@ en:
       success: "A new book request created"
     update:
       success: "your book request updated"
+    delete: 
+      success: "A book request deleted"

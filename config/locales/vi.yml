@@ -155,6 +155,8 @@ vi:
     create:
       create_success: "Đã tạo một yêu cầu mua sách"
       create_new: "Tạo yêu cầu"
+    delete: 
+      success: "Một yêu cầu đã được xóa"
 
   datetime:
     distance_in_words:
