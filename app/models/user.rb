@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  attr_accessor :remember_token
+  attr_accessor :remember_token,:reset_token
 
   before_validation :strip_whitespace
 
@@ -47,5 +47,16 @@ class User < ApplicationRecord
   def strip_whitespace
     self.name = name.strip unless name.nil?
     self.address = address.strip unless address.nil?
+  end
+
+  def create_reset_digest
+    self.reset_token = generate_user_new_token
+    update_attribute(:reset_digest, generate_user_digest(reset_token))
+    update_attribute(:reset_sent_at, Time.zone.now)
+  end
+
+  def send_password_reset_email(phone,email)
+    binding.pry
+    UserMailer.password_reset(phone,email).deliver_now
   end
 end
