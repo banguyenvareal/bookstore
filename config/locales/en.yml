@@ -188,3 +188,11 @@ en:
     delete:
       success: "Delete successfully!"
       fail: "Delete not successfully!"
+
+  password_reset:
+    title: "Forgot password"
+    email: "Email"
+    phone: "Phone number"
+    password: "Password"
+    password_confirmation: "Password confirmation"
+    submit: "Continue"

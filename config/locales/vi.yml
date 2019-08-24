@@ -194,3 +194,9 @@ vi:
     delete:
       success: "Xóa thành công!"
       not_success: "Xóa không thành công!"
+
+  password_reset:
+    title: "Quên mật khẩu"
+    email: "Email"
+    phone: "Số điện thoại"
+    submit: "Tiếp tục"
